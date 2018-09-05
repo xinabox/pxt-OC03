@@ -13,23 +13,31 @@ namespace OC03 {
     const PCA9554A_CONF_INPUT = 0xFF
     const PCA9554A_ALL_OUTPUTS_OFF = 0x00
 
-    function writeState(state: number): void {
+     /**
+    * Used to write the desired output state of the OC03
+    * @param chipAddress [64-125] The I2C address of your PCA9685; eg: 56
+    * @param state the state of the output channel
+ 	*/
+
+    function writeState(chipAddress: number = PCA9554A_I2C_ADDRESS, state: number): void {
         let buf: Buffer = pins.createBuffer(2);
         buf[0] = PCA9554A_REG_OUTPUT_PORT;
         buf[1] = state;
-        pins.i2cWriteBuffer(PCA9554A_I2C_ADDRESS, buf, false);
+        pins.i2cWriteBuffer(chipAddress, buf, false);
     }
 
     /**
- 	* OC03 Init, used to reset the chip and switch all outputs low
+    * OC03 Init, used to reset the chip and switch all outputs low
+    * @param chipAddress [64-125] The I2C address of your PCA9685; eg: 56
+    * @param state the state of the output channel
  	*/
     //% block
     //% weight=90
-    export function init(on: boolean): void {
-        if(on) {
-            writeState(0x01);
+    export function init(chipAddress: number = PCA9554A_I2C_ADDRESS, state: boolean): void {
+        if(state) {
+            writeState(chipAddress, 0x01);
         } else {
-            writeState(0x00);
+            writeState(chipAddress, 0x00);
         }
     }
 
@@ -42,15 +50,17 @@ namespace OC03 {
     }
 
     /**
-	* OC03 set the state of the output channel
+    * OC03 set the state of the output channel
+    * @param chipAddress [64-125] The I2C address of your PCA9685; eg: 56
+    * @param state the state of the output channel   
 	*/
     //% block
     //% weight=90
-    export function setState(on: boolean): void {
+    export function setState(chipAddress: number = PCA9554A_I2C_ADDRESS, on: boolean): void {
         if(on) {
-            writeState(0x01);
+            writeState(chipAddress, 0x01);
         } else {
-            writeState(0x00);
+            writeState(chipAddress, 0x00);
         }
     }
 }
