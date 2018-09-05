@@ -1,0 +1,15 @@
+{
+    "name": "pxt-OC03",
+    "version": "0.0.1",
+    "description": "MakeCode Package for the ☒OC03",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "oc03.ts",
+        "README.md"
+    ],
+    "public": true
+}
