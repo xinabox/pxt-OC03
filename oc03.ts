@@ -23,8 +23,8 @@ namespace OC03 {
     /**
  	* OC03 Init, used to reset the chip and switch all outputs low
  	*/
-    //% blockId="Init" block="Init OC03"
-    //% blockGap=1 weight=90
+    //% block
+    //% weight=90
     export function init(on: boolean): void {
         if(on) {
             writeState(0x01);
@@ -36,7 +36,7 @@ namespace OC03 {
     /**
      * Render a boolean as a on/off toggle
      */
-    //%  block="%on=toggleOnOff"
+    //% block="%on=toggleOnOff"
     export function onOff(on: boolean): boolean {
         return on;
     }
@@ -45,7 +45,7 @@ namespace OC03 {
 	* OC03 set the state of the output channel
 	*/
     //% block
-    //% blockGap=1 weight=90
+    //% weight=90
     export function setState(on: boolean): void {
         if(on) {
             writeState(0x01);
