@@ -1,4 +1,4 @@
-# pxt-OC05
+# pxt-OC03
 
 This is the MakeCode Package for ☒CHIP OC03
 
