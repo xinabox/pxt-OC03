@@ -1,7 +1,7 @@
 /**
  * OC03 Relay Out Low Voltage
  */
-//% weight=99 color=#444444 icon="\uf205" block="OC03"
+//% weight=99 color=#444444 icon="\uf011" block="OC03"
 //% groups=['Functions', 'Optional']
 namespace OC03 {
     // PCA9536 Register Definitions
