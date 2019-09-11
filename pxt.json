@@ -1,6 +1,6 @@
 {
     "name": "OC03",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "XinaBox OC03 relay: low-voltage relay",
     "authors": [
         "Bjarke Gotfredsen",
