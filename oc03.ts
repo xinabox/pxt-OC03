@@ -68,8 +68,9 @@ namespace OC03 {
     * OC03 set the state of the output channel
     * @param state the state of the output channel   
 	*/
-    //% block"%on=toggleOnOff" block="OC03 turn %on"
-    //% weight=90
+    //% blockId="ToggleOnOff" block="OC03 turn %on"
+    //% weight=90 blockGap=8
+    //% on.shadow="toggleOnOff"
     //% group="Functions"
     export function setState(on: boolean): void {
         if (on) {
