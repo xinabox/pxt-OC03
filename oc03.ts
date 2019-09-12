@@ -54,7 +54,7 @@ namespace OC03 {
     }
 
     /**
-    * Used to set the Alternative address of the OC03
+    * Used to set an alternative address of the OC03
     * @param chipAddress [72-80] The I2C address of your PCA9536; eg: 72
     */
     //% blockId="setAddress" block="OC03 set address %OC03_ADDR"
@@ -65,7 +65,7 @@ namespace OC03 {
     }
 
     /**
-    * OC03 set the state of the output channel
+    * Turn the relay on or off
     * @param state the state of the output channel   
 	*/
     //% blockId="ToggleOnOff" block="OC03 turn %on"
