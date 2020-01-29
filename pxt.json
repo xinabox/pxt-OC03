@@ -9,12 +9,13 @@
     ],
     "license": "MIT",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "xinabox-cs11": "*"
     },
     "files": [
         "oc03.ts",
         "README.md"
     ],
     "public": true,
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
